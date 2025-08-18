@@ -1,0 +1,31 @@
+<div class="flex flex-col items-center pt-16 pb-24" >
+  <div class="flex flex-col items-center text-center mt-12">
+    <h1 class="text-5xl font-extrabold text-slate-800">
+      Tribu
+    </h1>
+    <div class="my-4 w-16 h-16 flex items-center justify-center rounded-full bg-slate-800">
+      <svg xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="white"
+          class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 19.128a9.004 9.004 0 01-6 0m6 0A8.967 8.967 0 0018 15M9 19.128A8.967 8.967 0 016 15m3 4.128V21m6-1.872V21m-6-10.5A3 3 0 1112 7.5a3 3 0 01-3 3zm6 0a3 3 0 1112 7.5a3 3 0 01-3 3z"/>
+      </svg>
+    </div>
+    <p class="text-gray-500 mt-3 text-lg max-w-md">
+      Conecta y comparte con tu comunidad
+    </p>
+
+    <div class="mt-8">
+      <%= link_to "➕ Crear un nuevo post",
+        new_post_path,
+        class:"inline-block px-6 py-3 font-semibold text-white bg-gradient-to-r from-yellow-400 to-red-600 rounded-full shadow-lg hover:from-red-600 hover:to-yellow-400 hover:scale-105 transform transition duration-300 ease-out"
+      %>
+    </div>
+  </div>
+
+
+  <article class="bg-white rounded-2xl shadow p-5 space-y-4 w-full max-w-2xl mt-8">
+    <%= render partial: "posts", collection: @posts %>
+  </article>
+</div>
