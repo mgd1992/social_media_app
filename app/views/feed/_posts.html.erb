@@ -7,7 +7,7 @@
         <%= posts.user.email.first.upcase %>
       </div>
       <div>
-        <p class="text-sm font-semibold text-slate-700"><%= posts.user.email %></p>
+        <p class="text-sm font-semibold text-slate-700"><%= posts.user.username %></p>
         <p class="text-xs text-gray-400">hace <%= time_ago_in_words(posts.created_at) %></p>
       </div>
     </div>
