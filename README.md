@@ -1,24 +1,43 @@
-# README
+# Tribu 🪶
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tribu es una pequeña red social construida con **Ruby on Rails** y **Tailwind CSS**, pensada para compartir posts con texto e imágenes y conectar con tu comunidad.
 
-Things you may want to cover:
+## 🚀 Características
 
-* Ruby version
+- Registro e inicio de sesión de usuarios.
+- Crear, ver y listar **posts** con título, cuerpo e imágenes adjuntas.
+- Interfaz moderna y responsive con **Tailwind CSS**.
+- Feed de publicaciones.
+- Poder reaccionar a diferentes posts.
 
-* System dependencies
+## 🛠️ Tecnologías
 
-* Configuration
+- Ruby on Rails
+- Tailwind CSS
+- PostgreSQL
+- Hotwire / Turbo
 
-* Database creation
+## 📦 Instalación
 
-* Database initialization
+1. Clona el repositorio:
 
-* How to run the test suite
+```bash
+  git clone https://github.com/mgd1992/social_media_app.git
+  cd social_media_app
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Instala las dependencias:
+```bash
+bundle install
+```
 
-* Deployment instructions
+3. Inicia el servidor:
+```bash
+bin/dev
+```
 
-* ...
+### Luego abre http://localhost:3000 en tu navegador.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas! Haz un fork del proyecto, crea una rama y abre un Pull Request.
