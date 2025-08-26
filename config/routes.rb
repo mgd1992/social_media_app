@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    scope module: :posts do
+      resources :reactions, only: [:create]
+    end
+  end
   devise_for :users
 
 
@@ -12,6 +16,6 @@ Rails.application.routes.draw do
   end
 
 
-  
+
   get "up" => "rails/health#show", as: :rails_health_check
 end

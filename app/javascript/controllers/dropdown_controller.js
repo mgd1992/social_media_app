@@ -13,13 +13,16 @@ export default class extends Controller {
 
   }
 
-  closeUnlessDropdown(e) {
-    if (!this.element.contains(e.target)) {
-
-      if (!this.menuTarget.classList.contains("hidden")) {
-        this.menuTarget.classList.add("hidden")
-      }
-
+  close() {
+    if (!this.menuTarget.classList.contains("hidden")) {
+      this.menuTarget.classList.add("hidden")
     }
   }
+
+  closeUnlessDropdown(e) {
+    if (!this.element.contains(e.target)) {
+      this.close()
+    }
+  }
+
 }
