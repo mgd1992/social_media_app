@@ -1,20 +1,23 @@
-<div id="<%= dom_id post %>" class="w-full sm:w-auto my-5 space-y-5">
+<div id="<%= dom_id post %>" class="flex flex-col items-center justify-center sm:w-auto my-4 space-y-5 mx-auto ">
   <div>
-    <strong class="block font-medium mb-1">Caption:</strong>
+    <strong class=" font-medium mb-2">Titulo:</strong>
     <%= post.caption %>
   </div>
+
   <div>
-    <strong class="block font-medium mb-1">Body:</strong>
+    <strong class=" font-medium mb-10">Body:</strong>
     <%= post.body %>
   </div>
+
   <div>
-    <strong class="block font-medium mb-1">Images:</strong>
+    <strong class=" font-medium mb-2">Imágenes</strong>
     <% post.images.each do |image| %>
       <div><%= link_to image.filename, image, class: "text-gray-700 underline hover:no-underline" %></div>
     <% end %>
   </div>
+
   <div>
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= post.user_id %>
+    <strong class=" font-medium mb-1">Username:</strong>
+    <%= post.user.username %>
   </div>
 </div>

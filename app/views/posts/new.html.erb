@@ -1,7 +1,18 @@
 <% content_for :title, "New post" %>
 
-<div class="md:w-2/3 w-full mt-28 p-20 mx-auto border-2 border-amber-600 rounded-2xl" >
-  <h1 class="font-bold text-4xl text-center">New post</h1>
+<div class="md:w-2/3 w-full p-12 mx-auto" >
+  <div class="flex flex-col items-center text-center">
+    <div class="my-4 w-16 h-16 flex items-center justify-center rounded-full bg-slate-800">
+      <svg xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="white"
+          class="w-8 h-8">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15 19.128a9.004 9.004 0 01-6 0m6 0A8.967 8.967 0 0018 15M9 19.128A8.967 8.967 0 016 15m3 4.128V21m6-1.872V21m-6-10.5A3 3 0 1112 7.5a3 3 0 01-3 3zm6 0a3 3 0 1112 7.5a3 3 0 01-3 3z"/>
+      </svg>
+    </div>
+    <h1 class="font-bold text-4xl text-center">New post</h1>
+  </div>
 
   <%= render "form", post: @post %>
 
