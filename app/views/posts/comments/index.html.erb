@@ -1,0 +1,26 @@
+<div class="w-full flex flex-col items-center pt-24">
+
+  <div class="max-w-5xl w-full mx-auto">
+    <%= turbo_frame_tag @post, :comments do %>
+
+      <div class="flex flex-col gap-2">
+
+        <% if @post.comments.any? %>
+          <%= render partial: "comments", collection: @post.comments.order(created_at: :desc) %>
+          <div class="flex w-full justify-between items-center">
+            <%= link_to "Cancelar","/", class:"p-2 rounded-xl bg-gray-300 text-white mt-2 hover:bg-gray-700" %>
+          </div>
+        <% else %>
+          <div class="flex flex-col items-center justify-center">
+            <p>Sin comentarios aún</p>
+            <%= link_to "Dejar comentario", new_post_comment_path(@post), class:"w-100 mt-2 bg-gray-400 text-gray-100 p-2 rounded-lg text-center hover:bg-gray-300" %>
+            <%= link_to "Cancelar","/", class:"p-2 rounded-xl bg-gray-300 text-white mt-2 hover:bg-gray-700" %>          </div>
+        <% end %>
+
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

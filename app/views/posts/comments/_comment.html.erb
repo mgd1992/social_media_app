@@ -1,0 +1,13 @@
+<div id="<%= dom_id(comment) %>" class="flex items-center justify-between p-2 bg-gray-200">
+  <div>
+    <span class="text-sm text-slate-500"><%= comment.user.username %></span>
+    <p class="text-xs text-gray-400">hace <%= time_ago_in_words(comment.created_at) %></p>
+    <p class="text-sm text-slate-500 mt-3 px-2"><%= comment.body %></p>
+  </div>
+
+  <% if comment.user == current_user %>
+    <%= link_to "X", post_comment_path(comment.post, comment),
+                data: { turbo_method: :delete },
+                class: "px-2 bg-red-400 text-white rounded-lg hover:bg-red-500" %>
+  <% end %>
+</div>
