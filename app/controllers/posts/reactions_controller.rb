@@ -1,19 +1,14 @@
-class Posts::ReactionsController < ApplicationController
-  before_action :set_post
+module Posts
 
-  def create
-    reactions = current_user.reactions.find_or_create_by(post: @post)
-    reactions.update(name: params[:name])
+  class ReactionsController < BaseController
+    def create
+      reactions = current_user.reactions.find_or_create_by(post: @post)
+      reactions.update(name: params[:name])
 
-    respond_to do |format|
-      format.turbo_stream {}
+      respond_to do |format|
+        format.turbo_stream {}
+      end
     end
   end
-
-
-  private
-
-  def set_post
-    @post = Post.find(params[:post_id])
-  end
+  
 end
